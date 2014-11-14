@@ -8,7 +8,6 @@ module.exports =
 
     dummyApp:
       new Backbone.Model({
-        deployLink: 'http://whateverdavetellsme/v1/project/id/deploy'
-        healthCheckLink: 'http://whateverdavetellsme/v1/project/id/healthCheck'
-        health: 'up'
+        id: "id"
+        health: "up"
       })
