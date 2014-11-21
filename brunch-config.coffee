@@ -1,10 +1,13 @@
 exports.config =
   # See http://brunch.io/#documentation for docs.
+  paths:
+    watched: ['configs', 'app', 'test', 'vendor']
+
   files:
     javascripts:
       joinTo:
-        'javascripts/app.js': /^(app|src)/
-        'javascripts/vendor.js': /^(bower_components|vendor)/
+        'javascripts/app.js': /^(app|configs)/
+        'javascripts/vendor.js': /^bower_components/
 
     stylesheets:
       joinTo:

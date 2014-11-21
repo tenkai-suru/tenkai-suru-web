@@ -3,10 +3,10 @@ module.exports =
     _index: require 'tiramisu/home/index/view'
 
     index: (el) ->
-      view = new @_index(@dummyApp)
+      view = new @_index(@_dummyApp)
       el.append view.supply()
 
-    dummyApp:
+    _dummyApp:
       new Backbone.Model({
         id: "id"
         health: "up"

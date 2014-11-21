@@ -1,5 +1,5 @@
 module.exports =
-  class Tiramisu.Service.APIClient
+  class Tiramisu.Deploy.Client
     baseURL: "http://whateverdavetellsme"
 
     deploy: (appId) ->
@@ -11,4 +11,3 @@ module.exports =
       $.ajax
         url: "#{@baseURL}/v1/projects/#{appId}/healthcheck"
         type: "GET"
-

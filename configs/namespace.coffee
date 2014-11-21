@@ -1,4 +1,4 @@
 window.Tiramisu ||= {}
 window.Tiramisu.Home ||= {}
 window.Tiramisu.Home.Index ||= {}
-window.Tiramisu.Service ||= {}
+window.Tiramisu.Deploy ||= {}

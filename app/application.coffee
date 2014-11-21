@@ -1,4 +1,4 @@
-require 'config/namespace'
+require 'configs/namespace'
 require 'tiramisu/router'
 
 module.exports =

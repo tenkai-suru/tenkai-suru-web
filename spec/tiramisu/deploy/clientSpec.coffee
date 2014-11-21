@@ -1,6 +1,6 @@
-DescribedClass = require 'tiramisu/service/apiClient'
+DescribedClass = require 'tiramisu/deploy/client'
 
-describe 'Tiramisu.Service.APIClient', ->
+describe 'Tiramisu.Deploy.Client', ->
   describe '#deploy', ->
     it 'makes an async call to the external resource', ->
       client = new DescribedClass()

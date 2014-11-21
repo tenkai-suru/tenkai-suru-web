@@ -1,4 +1,3 @@
-require 'config/namespace'
 require 'tiramisu/home/controller'
 require 'tiramisu/home/index/view'
 

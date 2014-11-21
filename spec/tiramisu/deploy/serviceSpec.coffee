@@ -1,12 +1,11 @@
-DescribedClass = require 'tiramisu/service/deployer'
+DescribedClass = require 'tiramisu/deploy/service'
 
 describe "Tiramisu.Service.Deployer", ->
   describe "app deployment", ->
     it "delegates the deploy post to the APIClient", ->
-      applicationData = {
+      applicationData =
           id: "id"
           health: 'up'
-      }
       application = new Backbone.Model(applicationData)
       deployer = new DescribedClass(application)
       spyOn(deployer.apiClient, 'deploy')
@@ -14,10 +13,9 @@ describe "Tiramisu.Service.Deployer", ->
       expect(deployer.apiClient.deploy).toHaveBeenCalledWith("id")
   describe "app healthCheck", ->
     it "delegates the healthCheck get to the APIClient", ->
-      applicationData = {
+      applicationData =
           id: "id"
           health: 'up'
-      }
       application = new Backbone.Model(applicationData)
       deployer = new DescribedClass(application)
       spyOn(deployer.apiClient, 'healthCheck')

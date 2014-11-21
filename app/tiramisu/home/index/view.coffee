@@ -1,4 +1,4 @@
-require 'tiramisu/service/deployer'
+require 'tiramisu/deploy/service'
 
 module.exports =
   class Tiramisu.Home.Index.View extends Backbone.View
@@ -16,7 +16,7 @@ module.exports =
 
     init: ->
       @model.on('change', @render, @)
-      @deployer = new Tiramisu.Service.Deployer(@model)
+      @deployer = new Tiramisu.Deploy.Service(@model)
 
     supply: ->
       @render()
