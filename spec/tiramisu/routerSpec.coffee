@@ -1,7 +1,5 @@
 DescribedClass = require 'tiramisu/router'
 
-router = undefined
-
 beforeEach =>
   Backbone.history.stop()
   router = new DescribedClass()
@@ -16,7 +14,7 @@ describe "Tiramisu.Router", ->
   it "redirects to '' when route is unknown", ->
     spyOn(router, 'navigate')
     _navigate('/foo-bar')
-    expect(router.navigate).toHaveBeenCalledWith('')
+    expect(router.navigate).toHaveBeenCalledWith('', {trigger: true})
 
 _navigate = (route) ->
   Backbone.history.start()
