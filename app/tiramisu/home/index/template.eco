@@ -1,0 +1,5 @@
+<div id="index">
+  <button class="deployButton" data-id="deployButton">Deploy App</button>
+  <div class="deployHealth" data-id="deployStatus" data-status="<%= @app.health %>">
+  </div>
+</div>

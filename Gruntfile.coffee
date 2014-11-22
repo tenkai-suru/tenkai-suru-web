@@ -32,7 +32,10 @@ module.exports = (grunt) ->
       options:
         specs: 'tmp/spec/**/*.js'
         vendor: "public/javascripts/vendor.js"
-        helpers: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js'
+        helpers: [
+          'node_modules/jasmine-jquery/lib/jasmine-jquery.js'
+          'vendor/helpers/jasmine-jet.js'
+        ]
 
     watch:
       src:

@@ -1,0 +1,19 @@
+.deployButton {
+  display: block;
+  clear: both;
+}
+
+.deployHealth {
+  display: inline-block;
+  clear: both;
+  width: 100px;
+  height: 100px;
+}
+
+[data-status="up"] {
+  background-color: green;
+}
+
+[data-status="down"] {
+  background-color: red;
+}
