@@ -8,6 +8,6 @@ module.exports =
 
     _dummyApp:
       new Backbone.Model({
-        id: "id"
+        id: 1
         health: "up"
       })

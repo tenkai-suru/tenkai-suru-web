@@ -6,7 +6,17 @@ module.exports =
     constructor: (@model) ->
 
     deploy: ->
-      @apiClient.deploy(@model.get("id"))
+      @apiClient.deploy(@model.get("id"), @pollHealthCheck)
 
-    healthCheck: ->
-      @apiClient.healthCheck(@model.get("id"))
+    pollHealthCheck: (response) ->
+      if response.healthy
+        @model.set({health : "up"})
+      else
+        @model.set({health: "down"})
+        setTimeout(@repollHealthCheck, 5000)
+
+    repollHealthCheck: ->
+      @healthCheck(@pollHealthCheck)
+
+    healthCheck: (callback) ->
+      @apiClient.healthCheck(@model.get("id"), callback)
