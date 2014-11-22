@@ -1,14 +1,11 @@
 require 'tiramisu/home/index/view'
 
 describe 'Tiramisu.Home.Index.View', ->
-  attrs = model = view = undefined
+  jet 'attrs', ->  { deployLink: 'http://www.google.com', health: 'down' }
+  jet 'model', -> new Backbone.Model(attrs)
+  jet 'view', -> new Tiramisu.Home.Index.View(model)
 
   beforeEach ->
-    attrs =
-      deployLink: 'http://www.google.com/'
-      health: 'down'
-    model = new Backbone.Model(attrs)
-    view = new Tiramisu.Home.Index.View(model)
     spyOn(view.deployer, 'deploy')
 
   describe '#supply', ->

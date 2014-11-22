@@ -1,10 +1,11 @@
 DescribedClass = require 'tiramisu/router'
 
-beforeEach =>
-  Backbone.history.stop()
-  router = new DescribedClass()
-
 describe "Tiramisu.Router", ->
+  jet 'router', -> new DescribedClass()
+
+  beforeEach ->
+    Backbone.history.stop()
+
   it "route '' delegates to Home.Controller#index with $('body') element", ->
     el = $('body')
     spyOn(Tiramisu.Home.Controller, 'index')
