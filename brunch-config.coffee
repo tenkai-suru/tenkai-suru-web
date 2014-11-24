@@ -1,7 +1,11 @@
 exports.config =
   # See http://brunch.io/#documentation for docs.
   paths:
-    watched: ['configs', 'app', 'test', 'vendor']
+    watched: ['configs', 'app', 'test']
+
+   plugins:
+     sass:
+       mode: 'native'
 
   files:
     javascripts:

@@ -1,6 +1,6 @@
 module.exports =
   class Tiramisu.Deploy.Client
-    baseURL: "http://whateverdavetellsme"
+    baseURL: "https://tenkai-suru-api.herokuapp.com"
 
     deploy: (appId, callback, failback) ->
       $.ajax

@@ -8,14 +8,14 @@ module.exports =
     deploy: ->
       @apiClient.deploy(@model.get("id"), @pollHealthCheck)
 
-    pollHealthCheck: (response) ->
+    pollHealthCheck: (response) =>
       if response.healthy
         @model.set({health : "up"})
       else
         @model.set({health: "down"})
         setTimeout(@repollHealthCheck, 5000)
 
-    repollHealthCheck: ->
+    repollHealthCheck: =>
       @healthCheck(@pollHealthCheck)
 
     healthCheck: (callback) ->
