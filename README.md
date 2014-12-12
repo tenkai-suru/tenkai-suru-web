@@ -1,5 +1,7 @@
 ## Tiramisu
 
+[![Build Status](https://travis-ci.org/tenkai-suru/tenkai-suru-web.svg)](https://travis-ci.org/tenkai-suru/tenkai-suru-web)
+
 ### Under Construction
 
 #### How to start Developing on the App
