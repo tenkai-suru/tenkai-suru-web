@@ -8,7 +8,7 @@ describe 'Tiramisu.Deploy.Client', ->
   describe '#deploy', ->
     it 'makes an async call to the external resource', ->
       ajaxParams =
-        url: "#{client.baseURL}/v1/projects/1/deploy"
+        url: "#{client.baseURL}/v1/project/1/deploy"
         type: "POST"
         success: "callback"
         error: "failback"
@@ -18,7 +18,7 @@ describe 'Tiramisu.Deploy.Client', ->
   describe '#healthCheck', ->
     it 'makes an async call to the external resource', ->
       ajaxParams =
-        url: "#{client.baseURL}/v1/projects/1/healthcheck"
+        url: "#{client.baseURL}/v1/project/1/healthcheck"
         type: "GET"
         success: "callback"
         error: "failback"
