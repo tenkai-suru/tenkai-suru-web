@@ -1,8 +1,8 @@
-require 'tiramisu/deploy/service'
+require 'tiramisu/deploy/deployService'
 
 module.exports =
-  class Tiramisu.Home.Index.View extends Backbone.View
-    template: require 'tiramisu/home/index/template'
+  class Tiramisu.Home.Dashboard.View extends Backbone.View
+    template: require 'tiramisu/home/dashboard/template'
 
     constructor: (@model) ->
       super()
@@ -16,7 +16,7 @@ module.exports =
 
     init: ->
       @model.on('change', @render, @)
-      @deployer = new Tiramisu.Deploy.Service(@model)
+      @deployer = new Tiramisu.Deploy.DeployService(@model)
 
     supply: ->
       @render()

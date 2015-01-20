@@ -1,6 +1,6 @@
-DescribedClass = require 'tiramisu/deploy/service'
+DescribedClass = require 'tiramisu/deploy/deployService'
 
-describe "Tiramisu.Service.Deployer", ->
+describe "Tiramisu.Deploy.DeployService", ->
   jet 'application', -> new Backbone.Model({id: "id", health: "up"})
   jet 'deployer', -> new DescribedClass(application)
 

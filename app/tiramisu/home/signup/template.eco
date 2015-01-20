@@ -1,0 +1,5 @@
+<div id="index">
+  <input type="text" data-id="usernameField">
+  <input type="password" data-id="passwordField">
+  <button class="signupButton" data-id="signupButton">Signup</button>
+</div>

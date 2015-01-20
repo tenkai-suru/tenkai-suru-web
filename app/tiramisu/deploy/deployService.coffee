@@ -1,8 +1,8 @@
 require 'tiramisu/deploy/client'
 
 module.exports =
-  class Tiramisu.Deploy.Service
-    apiClient: new Tiramisu.Deploy.Client()
+  class Tiramisu.Deploy.DeployService
+    apiClient: Tiramisu.Deploy.Client
     constructor: (@model) ->
 
     deploy: ->

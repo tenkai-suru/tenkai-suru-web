@@ -1,13 +1,13 @@
 module.exports =
   Tiramisu.Home.Controller =
-    _index:   require 'tiramisu/home/index/view'
-    _signup:  require 'tiramisu/home/signup/view'
+    _dashboard: require 'tiramisu/home/dashboard/view'
+    _signup:    require 'tiramisu/home/signup/view'
 
-    index: (el) ->
-      view = new @_index(@_dummyApp)
+    dashboard: (el) ->
+      view = new @_dashboard(@_dummyApp)
       el.append view.supply()
 
-    signup: (el) ->
+    landing: (el) ->
       view = new @_signup()
       el.append view.supply()
 

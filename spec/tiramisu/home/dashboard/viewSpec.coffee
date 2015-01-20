@@ -1,16 +1,16 @@
-require 'tiramisu/home/index/view'
+DescribedClass = require 'tiramisu/home/dashboard/view'
 
-describe 'Tiramisu.Home.Index.View', ->
+describe 'Tiramisu.Home.Dashboard.View', ->
   jet 'attrs', ->  { deployLink: 'http://www.google.com', health: 'down' }
   jet 'model', -> new Backbone.Model(attrs)
-  jet 'view', -> new Tiramisu.Home.Index.View(model)
+  jet 'view', -> new DescribedClass(model)
 
   beforeEach ->
     spyOn(view.deployer, 'deploy')
 
   describe '#supply', ->
     it 'renders and returns the composed template', ->
-      expected = (require 'tiramisu/home/index/template')({app: attrs})
+      expected = (require 'tiramisu/home/dashboard/template')({app: attrs})
       el = view.supply()
       expect(expected).toEqual(el.html())
 
